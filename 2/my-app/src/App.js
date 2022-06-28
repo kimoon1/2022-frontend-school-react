@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const message = 'Learn React';
+  // const message = 'Learn React';
 
   // const getGreetingMessage = (name) => {
   //   if (name === 'kimoon') return `Hello, ${name}! Learn React`;
