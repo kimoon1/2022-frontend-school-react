@@ -1,6 +1,7 @@
 import React from 'react'
+import logo from '../logo.svg';
 
-function Header() {
+function Header(props) {
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -13,7 +14,7 @@ function Header() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {name === 'hwarari' ? `Hello, ${name} Learn React ` : `Welcome, ${name}! Learn React`}
+        {props.title}
       </a>
     </header>
   );
