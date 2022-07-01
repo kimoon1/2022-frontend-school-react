@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BoilingVerdict from "./BoilingVerdict";
+// import BoilingVerdict from "./BoilingVerdict";
 import TemperatureInput from "./TemperatureInput";
 
 export default function Calculator() {
