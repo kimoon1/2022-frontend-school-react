@@ -1,10 +1,10 @@
-import Banner from './component/Banner'
+import Toggle from './component/Toggle'
 
 export default function App() {
 
   return (
     <div>
-      <Banner />
+      <Toggle />
     </div>
   )
 }
