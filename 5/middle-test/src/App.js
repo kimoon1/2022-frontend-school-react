@@ -35,7 +35,8 @@ export default function App() {
   return (
     <div>
       {cards.length > 0 && <button onClick={draw}>추첨하기</button>}
-      {pickedCards.length > 0 && <BisinessCard info={pickedCards[pickedCards.length - 1]} />}
+      {/* {pickedCards.length > 0 && <BisinessCard info={pickedCards} />} */}
+      {pickedCards.length > 0 && pickedCards.map(pickedCard => <BisinessCard info={pickedCard} key={pickedCard.phoneNumber} />)}
     </div>
   );
 }
