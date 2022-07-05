@@ -1,6 +1,9 @@
 import React from "react";
 
 const Banner = () => {
+
+
+
   return (
     <div
       style={{
@@ -10,7 +13,9 @@ const Banner = () => {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
+        cursor: 'pointer'
       }}
+
     >
       이 곳을 클릭해서 쿠폰을 받아가세요.
       <button>닫기</button>
