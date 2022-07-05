@@ -1,10 +1,10 @@
-import SimpleForm from './component/SimpleForm'
+import UnControlledForm from './component/UnControlledForm'
 
 export default function App() {
 
   return (
     <div>
-      <SimpleForm />
+      <UnControlledForm />
     </div>
   )
 }
