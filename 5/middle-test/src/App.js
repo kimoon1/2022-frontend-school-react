@@ -1,10 +1,10 @@
-import Toggle from './component/Toggle'
+import SimpleForm from './component/SimpleForm'
 
 export default function App() {
 
   return (
     <div>
-      <Toggle />
+      <SimpleForm />
     </div>
   )
 }
