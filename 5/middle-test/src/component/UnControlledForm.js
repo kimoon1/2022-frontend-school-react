@@ -14,6 +14,7 @@ function UnControlledForm() {
   function handleSubmit(e) {
     e.preventDefault();
     alert(inputRef.current.value);
+    inputRef.current.focus();
   }
 
   return (

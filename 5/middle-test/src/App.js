@@ -1,10 +1,10 @@
-import UnControlledForm from './component/UnControlledForm'
+import CatParent from './component/CatParent'
 
 export default function App() {
 
   return (
     <div>
-      <UnControlledForm />
+      <CatParent />
     </div>
   )
 }
