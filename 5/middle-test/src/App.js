@@ -1,10 +1,10 @@
-import ToDoList from './component/ToDoList'
+import OnlineStore from './component/OnlineStore'
 
 export default function App() {
 
   return (
     <div>
-      <ToDoList />
+      <OnlineStore />
     </div>
   )
 }
