@@ -1,10 +1,10 @@
-import CatParent from './component/CatParent'
+import ToDoList from './component/ToDoList'
 
 export default function App() {
 
   return (
     <div>
-      <CatParent />
+      <ToDoList />
     </div>
   )
 }

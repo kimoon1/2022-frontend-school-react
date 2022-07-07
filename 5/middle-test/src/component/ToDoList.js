@@ -78,8 +78,8 @@ export default function ToDoList() {
           <th />
           <th>created at</th>
         </tr>
-        {state.list.map((todo, index) => (
-          <ToDo key={index} {...todo} />
+        {state.list.map((todo) => (
+          <ToDo key={todo.id} {...todo} />
         ))}
       </table>
     </div>
