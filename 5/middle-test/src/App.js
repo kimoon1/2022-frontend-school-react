@@ -1,4 +1,4 @@
-import OnlineStore from './component/OnlineStore정답'
+import OnlineStore from './component/OnlineStore 실습/OnlineStore정답'
 
 export default function App() {
 
