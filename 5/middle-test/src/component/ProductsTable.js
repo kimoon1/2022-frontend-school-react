@@ -10,13 +10,13 @@ function ProductsTable(props) {
     <>
 
       <tr>
-        <td>{category}</td>
+        <td style={{ fontWeight: 'bold' }}>{category}</td>
       </tr>
 
 
       {filteredItems.map((item, idx) => (
         <tr key={idx}>
-          <td>{item.name}</td>
+          <td style={{ color: item.stocked ? 'black' : 'red' }}>{item.name}</td>
           <td>{item.price}</td>
         </tr>
       ))}
