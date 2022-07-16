@@ -1,15 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function ReactDocPage() {
   //docID 1,2,3 .....
+
+  const navigate = useNavigate();
+
   const params = useParams();
   console.log(params)
 
   return (
-    <div>
-      REactDocPage ##{params.docId}
-    </div>
+    <>
+      <h5 onClick={() => navigate('/')}>logo</h5>
+      <div>      REactDocPage ##{params.docId}    </div>
+    </>
   )
 }
 

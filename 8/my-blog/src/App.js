@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import TechPage from './components/TechPage';
 import BlogPage from './components/BlogPage';
@@ -11,11 +11,10 @@ function App() {
   // tech url : tech page component
   // blog url : blog page component
 
-  const navigate = useNavigate();
+
 
   return (
     <BrowserRouter>
-      <h5 onClick={() => navigate('/')}>logo</h5>
       <Routes>
         <Route path={'/'} element={<MainPage />}></Route>
         <Route path={'/tech'} element={<TechPage />}>
@@ -25,7 +24,8 @@ function App() {
         </Route>
         <Route path={'/blog'} element={<BlogPage />}></Route>
       </Routes>
-    </BrowserRouter>);
+    </BrowserRouter>
+  );
 
 }
 
