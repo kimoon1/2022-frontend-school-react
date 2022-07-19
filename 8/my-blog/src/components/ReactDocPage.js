@@ -8,16 +8,17 @@ function ReactDocPage() {
   const navigate = useNavigate();
 
   const params = useParams();
-  console.log(params)
+  // console.log(params)
 
   useEffect(() => {
     async function getData() {
       const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.docId}`);
-      const result = await res.json();
-      console.log(result);
+      // const result = await res.json();
+      // console.log(result);
+      console.log(res);
     }
     getData();
-  }, [])
+  })
 
   return (
     <>
