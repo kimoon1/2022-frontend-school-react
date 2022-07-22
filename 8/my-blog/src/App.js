@@ -5,6 +5,7 @@ import BlogPage from './components/BlogPage';
 import JavaScriptPage from './components/JavaScriptPage';
 import ReactPage from './components/ReactPage';
 import ReactDocPage from './components/ReactDocPage';
+import UserStore, { UserContext } from './store/user'
 
 function App() {
   //root url : main page component
@@ -14,6 +15,7 @@ function App() {
 
 
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path={'/'} element={<MainPage />}></Route>
@@ -22,8 +24,12 @@ function App() {
           <Route path='react' element={<ReactPage />} />
           <Route path='react/:docId' element={<ReactDocPage />} />
         </Route>
-        <Route path={'/blog'} element={<BlogPage />}></Route>
       </Routes>
+      <UserStore>
+        <Routes>
+          <Route path={'/blog'} element={<BlogPage />}></Route>
+        </Routes>
+      </UserStore>
     </BrowserRouter>
   );
 
