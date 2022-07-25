@@ -4,6 +4,7 @@ import {
   fetchUserRequest,
   fetchUserSuccess,
   fetchUserFailure,
+  fetchUserThunk,
 } from "./modules/account/account";
 
 function App() {
@@ -11,15 +12,22 @@ function App() {
   const { loading, name, email } = account;
   const dispatch = useDispatch();
 
-  const handleClick = async () => {
-    dispatch(fetchUserRequest());
-    try {
-      const res = await fetchUser();
-      dispatch(fetchUserSuccess({ name: res.name, email: res.email }));
-    } catch {
-      dispatch(fetchUserFailure());
-    }
-  };
+  // const handleClick = async () => {
+  //   dispatch(fetchUserRequest());
+  //   try {
+  //     const res = await fetchUser();
+  //     console.log(res);
+  //     dispatch(fetchUserSuccess({ name: res.name, email: res.email }));
+  //   } catch {
+  //     dispatch(fetchUserFailure());
+  //   }
+  // };
+
+  const handleClick = () => {
+    dispatch(fetchUserThunk());
+  }
+
+  console.log(account);
 
   return (
     <div className="App">

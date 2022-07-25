@@ -20,7 +20,18 @@ export const fetchUserFailure = () => ({
 });
 
 // TODO: thunk 함수 만들기
-export const fetchUserThunk = () => {};
+export const fetchUserThunk = () => {
+  return async (dispatch) => {
+    try {
+      dispatch(fetchUserRequest());
+      const res = await fetchUser();
+      dispatch(fetchUserSuccess({ name: res.name, email: res.email }));
+    } catch {
+      dispatch(fetchUserFailure());
+    }
+
+  }
+};
 
 const initialState = {
   loading: false,
@@ -41,7 +52,7 @@ export default function counter(state = initialState, action) {
         name: action.payload.name,
         email: action.payload.email,
       };
-    case FETCH_USER_SUCCESS:
+    case FETCH_USER_FAILURE:
       return initialState;
     default:
       return state;
